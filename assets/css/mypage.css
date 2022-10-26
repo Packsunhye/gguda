@@ -1,0 +1,194 @@
+.myPage__view{
+    /* background: #2D2836; */
+    font-weight: 700;
+    font-size: 16px;
+    color: #E5E4E7;
+    width: 100%;
+}
+
+.myPage__inner{
+    max-width: 1160px;
+    background: rgba(255, 255, 255, 0.278);
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.myPage__menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 30%;
+    box-sizing: border-box;
+}
+.myPage__menu p{
+    color: #000;
+}
+.myPage__menu p:nth-child(2){font-size: 24px; margin-bottom: 10px;}
+.myPage__menu p:nth-child(3){
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.373);
+    font-weight: normal;
+    margin-bottom: 16px;
+}
+
+.myPage__menu img{
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    position: relative;
+}
+.myPage__img{  
+    border-radius: 100%;
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #0000001a;
+    
+}
+.profile_alert{
+    /* border: 1px solid #180066db; */
+    border-radius: 100px;
+    padding: 10px;
+    background: #562ff314;
+    color: #3512a7 !important;
+    font-weight: lighter;
+}
+
+
+.myPage__cont{
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+    /* border-left: 1px solid #0000001a; */
+}
+.myPage__cont p{
+    color: #000;
+    font-size: 18px;
+    font-weight: normal;
+}
+.myPage__cont .status{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 64px;
+    transition: transform 0.25s, background 0.25s, border 0.25s, box-shadow 0.25s;
+    transform: scale(1.05);
+    background: #fff;
+    box-shadow: 0px 20px 30px -5px #23084f1a;
+    /* box-sizing: border-box; */
+}
+.myPage__cont .status p:nth-child(1){
+    font-size: 32px;
+    color: #4226b2;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+/* .myPage__cont .status .list{
+    display: flex;
+}
+.myPage__cont .status .list p{
+    font-size: 18px;
+    font-weight: normal;
+} */
+.myPage__menu .list{
+    display: flex;
+    margin-bottom: 20px;
+    color: #535e74;
+    font-weight: lighter;
+    background: #e9ecf1;
+    border-radius: 100px;
+    padding: 8px;
+}
+.myPage__menu .list div{
+    margin-right: 5px;
+    border-right: 1px solid #cacdd1;
+    padding-right: 5px;
+}
+.myPage__menu .list div:last-child{
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+}
+.myPage__menu .list span{
+    /* margin-right: 5px; */
+}
+
+.board__item,
+.myPlage__cont__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 10px;
+    /* border-bottom: 1px solid #e0e1e3; */
+    border-radius: 15px;
+    cursor: pointer;
+}
+.board__item:hover,
+.myPlage__cont__item:hover{
+    box-shadow: 0px 50px 30px -35px #23084f2b;
+    background: #fff;
+    transition: transform 0.25s, background 0.25s, border 0.25s, box-shadow 0.25s;
+    transform: scale(1.05);
+}
+/* .myPlage__cont__item:hover p{color: #fff;} */
+.board__item:not(:hover),
+.myPlage__cont__item:not(:hover){
+    transition: 0.25s;
+}
+.board__item h2{
+    font-size: 18px;
+}
+
+.myPage__img__cont{
+    position: relative;
+    margin-bottom: 20px;
+}
+.profile__image__mod{
+    position: absolute;
+    bottom: 10px;
+    right: 1px;
+    color: #ffffff;
+    background: #4226b2;
+    padding: 10px;
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 0.6;
+    font-weight: lighter;
+    font-size: 24px;
+    border: 4px solid #f8fafc;
+}
+
+.myPage__cont__board{
+    margin-bottom: 40px;
+}
+.myPage__title{
+    padding: 20px 10px;
+    font-weight: normal;
+    color: #000;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e9ecf1;
+}
+.profile_hr{
+    width: 50px;
+    border: 1px solid #e9ecf1;
+    margin-bottom: 30px;
+}
+
+.myPage_myboard_list{
+    position: relative;
+}
+.myPage_item_background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}

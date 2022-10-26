@@ -53,12 +53,11 @@
         echo "<script>alert('이미지 용량이 1메가를 초과했습니다.'); history.back(1)</script>";
         exit;
     }
-    var_dump($connect);
     $result = $connect -> query($sql);
     $result = move_uploaded_file($boardImgTmp, $boardImgDir.$boardImgName);
 
 
-    // Header("Location: board.php");
+    Header("Location: board.php");
 
 
     // $sql = "INSERT INTO myBoard(myMemberID, boardTitle, boardSection, boardContents, boardView, regTime) VALUES('$myMemberID','$boardTitle', '$boardSection','$boardContents', '$boardView', '$regTime')";

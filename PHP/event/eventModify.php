@@ -8,7 +8,6 @@
     // echo "</pre>";
 ?>
 
- 
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -29,14 +28,23 @@
             <?php include "../include/header.php" ?>
             <div class="board">
                 <div class="board_info">
-                    <img class="notice_logo" src="../../assets/img/site_board_edit.png" alt="">
+                    <img src="../../assets/img/board_header_01.png" class="header_icon_01" alt="">
+                    <img src="../../assets/img/board_header_02.png" class="header_icon_02" alt="">
+                    <img src="../../assets/img/board_header_03.png" class="header_icon_03" alt="">
+                    <img src="../../assets/img/board_header_04.png" class="header_icon_04" alt="">
+                    <img src="../../assets/img/board_header_05.png" class="header_icon_05" alt="">
                     <h2>내 글 수정</h2>
                     <p>수정할 내용을 확인하여 주세요!</p>
                     <img src="../../assets/img/site_board_notice_cross.png" alt="">
-                    <!-- <div class="section_selector">
-                        <a class="select" href="#">공지사항</a>
-                        <a href="#">이벤트</a>
-                    </div> -->
+                </div>
+                <div class="section_selector">
+                    <div class="section_container">
+                        <a class="select" href="../board/board.php">공지사항</a>
+                        <a href="event.php">이벤트</a>
+                    </div>
+                    <div class="modify_cont">
+                        <a class="select remove_btn" href="eventDelete.php?myEventID=<?=$_GET['myEventID']?>" onclick="alert('정말 삭제하시겠습니까? ;3')">삭제(다른방식)</a>
+                    </div>
                 </div>
                 <hr>
                 <div class="board__view">
@@ -50,9 +58,32 @@
 
     if($result){
         $info = $result -> fetch_array(MYSQLI_ASSOC);
-        echo "<div style='display:none'><label for='myEventID'>번호</label><input type='text' name='myEventID' id='myBoardID' value='".$info['myEventID']."'></div><div><label for='eventTitle' class='blind'>제목</label><input type='text' name='eventTitle' id='boardTitle' value='".$info['eventTitle']."'></div>";
-        echo "<div><label for='eventContents' class='blind'>내용</label><textarea name='eventContents' id='boardContents' rows='20'>".$info['eventContents']."</textarea></div>";
+        echo "<div style='display:none'><label for='myBoardID'>번호</label><input type='text' name='myEventID' id='myBoardID' value='".$info['myEventID']."'></div><div><label for='boardTitle' class='blind'>제목</label><input type='text' name='eventTitle' id='boardTitle' value='".$info['eventTitle']."'></div>";
+        // echo "<div><label for='boardContents' class='blind'>내용</label><textarea name='boardContents' id='boardContents' rows='20'>".$info['boardContents']."</textarea></div>";
     }
+?>
+<?php
+    $eventCount = $result -> fetch_array(MYSQLI_ASSOC);
+    $eventCount = $eventCount['count(myEventID)'];
+
+    $connect -> query($sql);
+
+    // echo $myBoardID;
+    $sql = "SELECT e.eventTitle, e.eventSection, m.youImageFile, e.regTime, e.eventView, e.eventContents FROM myEvent e JOIN myMember m ON(m.myMemberID = e.myMemberID) WHERE e.myEventID = {$myEventID}";
+    $result = $connect -> query($sql);
+
+
+    if($result){
+    $info = $result -> fetch_array(MYSQLI_ASSOC);
+        echo "<div class='view-info'>";
+        echo "<img src='../../assets/img/blog/".$info['youImageFile']."' alt='프로필 이미지'>";
+        echo "<p class='view-time'> ".$info['eventSection']." | ".date('Y-m-d H:i',$info['regTime'])." </p>";
+        echo "<p class='view-num'> 조회수 ".$info['eventView']." </p>";
+        echo "</div>";
+    }
+?>
+<?php
+    echo "<div><label for='boardContents' class='blind'>내용</label><textarea name='eventContents' id='boardContents' rows='20'>".$info['eventContents']."</textarea></div>";
 ?>
                             <div>
 <?php
@@ -61,7 +92,7 @@
         echo "<input type='password' class='psss-btn' name='youPass' id='youPass' placeholder='내 비밀번호 입력해주세요!' autocomplete='off' required>";
     }
 ?>
-                                <button type="submit" value="수정하기">수정하기</button>
+                                <button type="submit" value="수정하기" class="Modi__btn-pass">수정하기</button>
                             </div>
                         </fieldset>
                     </form>
@@ -72,11 +103,13 @@
                         </form> -->
                         <div class="wail">
                             <!-- <a class="modify_btn" href="boardModify.php?myBoardID=&lt;?=$_GET['myBoardID']?>">수정(다른방식)</a> -->
-                            <a class="select remove_btn" href="eventDelete.php?myEventID=<?=$_GET['myEventID']?>" onclick="alert('정말 삭제하시겠습니까? ;3')">삭제(다른방식)</a>
+                            <!-- <a class="select remove_btn" href="boardDelete.php?myBoardID=<?=$_GET['myEventID']?>" onclick="alert('정말 삭제하시겠습니까? ;3')">삭제(다른방식)</a> -->
                         </div>
                 </div>
             </div>
         </div>
+        <?php include "../include/footer.php" ?>
+
     </div>
 </body>
 <script src="../../assets/javascript/common.js"></script>

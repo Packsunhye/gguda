@@ -61,7 +61,7 @@
                 <div class="section_selector">
                     <div class="section_container">
                         <a class="select" href="board.php">공지사항</a>
-                        <a href="../event/event.php"">이벤트</a>
+                        <a href="../event/event.php">이벤트</a>
                     </div>
                     <form action="boardSearch.php" name="boardSearch" method="get" id="board_search">
                         <fieldset>

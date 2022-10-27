@@ -92,7 +92,7 @@
         echo "<input type='password' class='psss-btn' name='youPass' id='youPass' placeholder='내 비밀번호 입력해주세요!' autocomplete='off' required>";
     }
 ?>
-                                <button type="submit" value="수정하기">수정하기</button>
+                                <button type="submit" value="수정하기" class="Modi__btn-pass">수정하기</button>
                             </div>
                         </fieldset>
                     </form>

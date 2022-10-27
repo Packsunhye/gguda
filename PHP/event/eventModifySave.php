@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이벤트</title>
+    <title>공지사항</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/board.css">
 </head>
@@ -48,7 +48,7 @@
     $memberInfo = $result -> fetch_array(MYSQLI_ASSOC);
 
     if($memberInfo['youPass'] === $youPass && $memberInfo['myMemberID'] === $myMemberID){
-        $sql = "UPDATE myEvent SET eventTitle = '{$eventTitle}', EventContents = '{$eventContents}' WHERE myEventID = '{$myEventID}'";
+        $sql = "UPDATE myEvent SET eventTitle = '{$eventTitle}', eventContents = '{$eventContents}' WHERE myEventID = '{$myEventID}'";
         $connect -> query($sql);
 
         // var_dump ($sql);
@@ -64,6 +64,8 @@
                 </div>
             </div>
         </div>
+        <?php include "../include/footer.php" ?>
+
     </div>
 </body>
 <script src="../../assets/javascript/common.js"></script>

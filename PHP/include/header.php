@@ -3,7 +3,7 @@
     <a href="../board/board.php">공지사항</a>
     <a href="../event/event.php">이벤트</a>
     <a href="../rank/rank.php">이달의 순위</a>
-    <a href="../deco/deco.php">다꾸하기</a>
+    <a href="../deco/decoDiary.php">다꾸하기</a>
     <a href="../info/info.php">정보</a>
     <a href="../faq/faq.php">FAQ</a>
 </div>
@@ -14,7 +14,7 @@
         <a href="../board/board.php">공지사항</a>
         <a href="../event/event.php">이벤트</a>
         <a href="../rank/rank.php">이달의 순위</a>
-        <a href="../deco/deco.php">다꾸하기</a>
+        <a href="../deco/decoDiary.php">다꾸하기</a>
         <a href="../info/info.php">정보</a>
         <a href="../faq/faq.php">FAQ</a>
     </div>

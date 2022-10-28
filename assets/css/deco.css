@@ -1,0 +1,7 @@
+.deco__Diary{
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}

@@ -56,7 +56,7 @@
     $result = $connect -> query($sql);
     $result = move_uploaded_file($boardImgTmp, $boardImgDir.$boardImgName);
 
-                                                                           
+
     Header("Location: board.php");
 
 
